@@ -7,7 +7,7 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task0.V10.Test
         [TestMethod]
         public void CheckedExistsFile()
         {
-            string path = @"C:\Пользователи\Кошка\source\repos\Tyuiu.RadochinaAP.Sprint5\Tyuiu.RadochinaAP.Sprint5.Task0.V10\bin\Debug\OutPutFileTask0.txt";
+            string path = @"C:\Users\Кошка\source\repos\Tyuiu.RadochinaAP.Sprint5\Tyuiu.RadochinaAP.Sprint5.Task0.V10\bin\Debug\OutPutFileTask0.txt";
 
             FileInfo fileinfo = new FileInfo(path);
             bool fileExists = fileinfo.Exists;

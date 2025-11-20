@@ -9,7 +9,6 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task0.V10.Lib
             string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask0.txt";
 
             double z = Math.Round(1.6 * Math.Pow(x, 3) - 2.1 * Math.Pow(x, 2) + 7 * x, 2);
-            z = Math.Round(z, 2);
 
             File.WriteAllText(path, Convert.ToString(z));
             return path;
