@@ -10,6 +10,10 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task4.V9.Lib
         public double LoadFromDataFile(string path)
         {
             string strX = File.ReadAllText(path);
+
+            // Заменяем точку на запятую
+            strX = strX.Replace(".", ",");
+
             double x = Convert.ToDouble(strX);
 
             double res = Math.Round(1 / Math.Sin(x) + Math.Pow(x, 2), 3);
