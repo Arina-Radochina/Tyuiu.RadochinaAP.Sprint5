@@ -1,4 +1,6 @@
-﻿using Tyuiu.RadochinaAP.Sprint5.Task1.V15.Lib;
+﻿using System.IO;
+using Tyuiu.RadochinaAP.Sprint5.Task1.V15.Lib;
+using static Microsoft.ApplicationInsights.MetricDimensionNames.TelemetryContext;
 namespace Tyuiu.RadochinaAP.Sprint5.Task1.V15.Test
 {
     [TestClass]
