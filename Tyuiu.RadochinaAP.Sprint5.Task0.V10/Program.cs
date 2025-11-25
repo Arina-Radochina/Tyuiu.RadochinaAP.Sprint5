@@ -27,6 +27,9 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task0.V10
 
             Console.WriteLine("x = " + x);
 
+            double result = 1.6 * Math.Pow(x, 3) - 2.1 * Math.Pow(x, 2) + 7 * x;
+            result = Math.Round(result, 3);
+
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
@@ -35,6 +38,9 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task0.V10
 
             Console.WriteLine("Файл: " + res);
             Console.WriteLine("Создан!");
+
+            System.Threading.Thread.Sleep(1000);
+
             Console.ReadKey();
         }
     }
