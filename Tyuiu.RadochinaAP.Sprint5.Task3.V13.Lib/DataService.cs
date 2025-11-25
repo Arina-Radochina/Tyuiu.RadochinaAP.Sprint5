@@ -9,7 +9,7 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task3.V13.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask3.bin";
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask3.bin");
 
             double z = (double)x / (Math.Pow(x, 3) + 2);
             z = Math.Round(z, 3);
@@ -23,3 +23,4 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task3.V13.Lib
         }
     }
 }
+     

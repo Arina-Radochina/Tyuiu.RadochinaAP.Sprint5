@@ -10,7 +10,8 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task3.V13.Test
         [TestMethod]
         public void CheckedExistsFile()
         {
-            string path = @"C:\Users\Кошка\source\repos\Tyuiu.RadochinaAP.Sprint5\Tyuiu.RadochinaAP.Sprint5.Task3.V13\bin\Debug\net8.0\OutPutFileTask3.bin";
+            DataService ds = new DataService();
+            string path = ds.SaveToFileTextData(3);
 
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
@@ -20,4 +21,5 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task3.V13.Test
         }
     }
 }
+    
      

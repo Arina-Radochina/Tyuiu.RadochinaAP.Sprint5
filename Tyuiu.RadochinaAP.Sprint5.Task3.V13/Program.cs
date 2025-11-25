@@ -29,7 +29,6 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task3.V13
 
             Console.WriteLine("x = " + x);
 
-            // Вычисляем и выводим результат
             double result = (double)x / (Math.Pow(x, 3) + 2);
             result = Math.Round(result, 3);
             Console.WriteLine($"y({x}) = {result}");
