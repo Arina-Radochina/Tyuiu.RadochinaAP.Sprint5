@@ -7,7 +7,7 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task1.V15.Lib
     {
         public string SaveToFileTextData(int startValue, int stopValue)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask1.txt";
+            string path = Path.Combine(Directory.GetCurrentDirectory(), "OutPutFileTask1.txt");
 
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
@@ -22,7 +22,7 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task1.V15.Lib
 
             for (int x = startValue; x <= stopValue; x++)
             {
-                if (Math.Abs(x - 0.4) < 0.001) 
+                if (Math.Abs(x - 0.4) < 0.001)
                 {
                     y = 0;
                 }
@@ -46,6 +46,7 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task1.V15.Lib
             return path;
         }
     }
+    
     
 }
    

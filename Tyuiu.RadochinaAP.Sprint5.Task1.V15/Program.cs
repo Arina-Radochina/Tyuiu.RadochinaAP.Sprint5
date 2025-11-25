@@ -19,8 +19,8 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task1.V15
             Console.WriteLine("* Выполнила: Радочина Арина Павловна | ПИНб-25-1                          *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Дано выражение, вычислить его значение при x = 2, результат сохранить   *");
-            Console.WriteLine("* в текстовый файл OutPutFileTask0.txt и вывести на консоль.              *");
+            Console.WriteLine("*                                                                         *");
+            Console.WriteLine("*                                                                         *");
             Console.WriteLine("*                                                                         *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
