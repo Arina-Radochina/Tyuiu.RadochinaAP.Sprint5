@@ -9,21 +9,20 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task7.V23.Lib
         {
             string outputPath = Path.Combine(Path.GetTempPath(), "OutPutDataFileTask7V23.txt");
 
-            // Читаем весь текст из файла
             string text = File.ReadAllText(path);
 
-            // Удаляем русские слова (кириллические символы)
+            // Удаляем русские слова и убираем пробелы перед знаками препинания
             string result = Regex.Replace(text, @"\b[а-яА-ЯёЁ]+\b", "");
 
-            // Убираем лишние пробелы и запятые
+            // Убираем лишние пробелы и пробелы перед знаками препинания
             result = Regex.Replace(result, @"\s+", " ");
+            result = Regex.Replace(result, @"\s+([.,!?;:])", "$1");
             result = result.Trim();
 
-            // Записываем результат в новый файл
             File.WriteAllText(outputPath, result, Encoding.UTF8);
-
             return outputPath;
         }
     }
 }
+
      
