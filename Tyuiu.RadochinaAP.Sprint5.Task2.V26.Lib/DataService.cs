@@ -1,12 +1,15 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using tyuiu.cources.programming.interfaces.Sprint5;
+
 namespace Tyuiu.RadochinaAP.Sprint5.Task2.V26.Lib
 {
     public class DataService : ISprint5Task2V26
     {
         public string SaveToFileTextData(int[,] matrix)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask2.csv";
+            
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask2.csv");
 
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
@@ -16,8 +19,8 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task2.V26.Lib
                 File.Delete(path);
             }
 
-            int rows = matrix.GetLength(0); 
-            int columns = matrix.GetLength(1); 
+            int rows = matrix.GetLength(0);
+            int columns = matrix.GetLength(1);
 
             string str = "";
 
@@ -25,7 +28,6 @@ namespace Tyuiu.RadochinaAP.Sprint5.Task2.V26.Lib
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    
                     if (matrix[i, j] > 0)
                     {
                         str += "1";
